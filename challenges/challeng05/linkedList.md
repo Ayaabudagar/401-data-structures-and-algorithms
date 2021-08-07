@@ -28,7 +28,7 @@ tail of the linked list
 -argument: a number, k, as a parameter.
 -Return the node’s value that is k places from the tail of the linked list.
 
-
+![linked-list-kth](code7.PNG)
 
 
 

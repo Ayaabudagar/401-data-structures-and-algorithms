@@ -1,7 +1,10 @@
 package challeng05;
-public class LinkedList {
 
-    Node head;
+
+
+public class LinkedList {
+    public Node head ;
+
 
     public void insert(int value)  {
         Node newInsertNode = new Node(value);
@@ -33,6 +36,7 @@ public class LinkedList {
         }
         return result;
     }
+
     public String kthFromEnd(int k){
         int count = 0;
         Node current  =this.head;
@@ -53,5 +57,49 @@ public class LinkedList {
         return result;
 
     }
+
+    public int append(int value){
+        Node newNode = new Node(value);
+        Node current = this.head;
+
+        if(head == null){
+            head = newNode;
+        }else {
+
+            while (current.next != null){
+                current = current.next;
+            }
+            current.next = newNode;
+        }
+
+        return newNode.value;
+    }
+    public static LinkedList zipLists(LinkedList list1 ,LinkedList list2){
+        LinkedList mergedList = new LinkedList();
+
+        Node firstTemp = list1.head;
+        Node secondTemp = list2.head;
+
+        while(firstTemp!=null ||secondTemp != null){
+            if(firstTemp == null){
+                mergedList.append(secondTemp.value);
+                secondTemp=secondTemp.next;
+            }
+            if(secondTemp == null){
+                mergedList.append(firstTemp.value);
+                firstTemp=firstTemp.next;
+            }
+
+            else {
+                mergedList.append(firstTemp.value);
+                mergedList.append(secondTemp.value);
+                firstTemp=firstTemp.next;
+                secondTemp=secondTemp.next;
+            }
+
+        }
+        return mergedList;
+    }
+
 
 }

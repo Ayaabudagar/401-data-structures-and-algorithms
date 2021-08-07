@@ -36,6 +36,28 @@ public class LinkedList {
         }
         return result;
     }
+
+    public String kthFromEnd(int k){
+        int count = 0;
+        Node current  =this.head;
+        while (current != null) {
+            current = current.next;
+            count++;
+        }
+        if (count < k){
+            return "Exception";
+        } else if (k <= 0){
+            return "Null";
+        }
+        current = this.head;
+        for (int i = 1; i < count - k + 1; i++)
+            current = current.next;
+        String result = "";
+        result += current.value;
+        return result;
+
+    }
+
     public int append(int value){
         Node newNode = new Node(value);
         Node current = this.head;

@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/challeng05.iml" filepath="$PROJECT_DIR$/.idea/challeng05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib/challeng05.lib.iml" filepath="$PROJECT_DIR$/.idea/modules/lib/challeng05.lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib/challeng05.lib.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lib/challeng05.lib.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib/challeng05.lib.test.iml" filepath="$PROJECT_DIR$/.idea/modules/lib/challeng05.lib.test.iml" />
     </modules>
   </component>
 </project>

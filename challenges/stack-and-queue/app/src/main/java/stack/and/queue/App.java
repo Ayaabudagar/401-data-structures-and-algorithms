@@ -18,5 +18,14 @@ public class App {
         Queue <Integer> queue = new Queue<>();
         System.out.println(queue.rear.value);
         queue.enqueue(2);
+        PseudoQueue pseudo = new PseudoQueue();
+
+        pseudo.enqueue(4);
+        pseudo.enqueue(6);
+        pseudo.dequeue();
+        pseudo.enqueue(10);
+        pseudo.dequeue();
+        System.out.println(pseudo.stackOne.toString());
     }
 }
+

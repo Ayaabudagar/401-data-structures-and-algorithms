@@ -26,6 +26,13 @@ public class App {
         pseudo.enqueue(10);
         pseudo.dequeue();
         System.out.println(pseudo.stackOne.toString());
+
+        AnimalShelter animalShelter = new AnimalShelter();
+        System.out.println(animalShelter);
+        animalShelter.dequeue("cat");
+        animalShelter.dequeue("dog");
+        Animal animal = new Dog();
+        animalShelter.enqueue(animal);
     }
 }
 

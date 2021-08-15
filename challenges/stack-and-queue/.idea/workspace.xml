@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2680387b-e6b2-4370-9f9f-d31a518dbd01" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/stack/and/queue/PseudoQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/stack/and/queue/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/stack/and/queue/AnimalShelter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/stack/and/queue/Cat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/stack/and/queue/Dog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack-and-queue.md" beforeDir="false" afterPath="$PROJECT_DIR$/stack-and-queue.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/stack/and/queue/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/stack/and/queue/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trees/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../trees/.idea/gradle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,17 +73,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
@@ -97,7 +89,9 @@
       <updated>1628268716239</updated>
       <workItem from="1628268719460" duration="6645000" />
       <workItem from="1628343167826" duration="24000" />
-      <workItem from="1628520310703" duration="2327000" />
+      <workItem from="1628520310703" duration="3233000" />
+      <workItem from="1628961346960" duration="20000" />
+      <workItem from="1629044763009" duration="1288000" />
     </task>
     <servers />
   </component>

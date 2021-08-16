@@ -12,6 +12,11 @@ public class App {
         System.out.println(new App().getGreeting());
         BinaryTree<Integer> newTree = new BinaryTree<>();
         Node<Integer> node5 = new Node<>(6);
+        newTree.root.right = node5;
+        System.out.println(newTree.maximumValue());
+
+       
+
 
 
         BinarySearchTree binarySearchTree = new BinarySearchTree();
@@ -23,6 +28,7 @@ public class App {
 
         binarySearchTree.contains(7);
         System.out.println (binarySearchTree.contains(14));
+
 
     }
 

@@ -18,3 +18,13 @@ Adds a new node with that value in the correct location in the binary search tre
 ### Contains
 Argument: value
 Returns: boolean indicating whether or not the value is in the tree at least once.
+
+#code challenge 16
+## Write the following method for the Binary Tree class
+
+find maximum value
+Arguments: none
+Returns: number
+Find the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
+![maximum value](code16.PNG)
+

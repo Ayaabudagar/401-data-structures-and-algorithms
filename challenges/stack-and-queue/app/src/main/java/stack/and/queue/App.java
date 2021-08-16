@@ -34,5 +34,25 @@ public class App {
         Animal animal = new Dog();
         animalShelter.enqueue(animal);
     }
+    public static boolean brackets (String string) {
+        Stack<String> validateStack = new Stack<>();
+        if (string.isEmpty()) return true;
+
+        String[] bracketArray= string.split("");
+        for (String character:bracketArray){
+            if (character.equals("[") || character.equals("{") || character.equals("(")) {
+                validateStack.push(character);
+
+            if ((character.equals("]") || character.equals("}") || character.equals(")"))) {
+                return false;
+            }
+                if (validateStack.isEmpty()) return false;
+
+        }
+
+    }
+        return validateStack.isEmpty();
+    }
 }
+
 

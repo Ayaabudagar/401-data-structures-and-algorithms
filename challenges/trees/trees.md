@@ -19,7 +19,7 @@ Adds a new node with that value in the correct location in the binary search tre
 Argument: value
 Returns: boolean indicating whether or not the value is in the tree at least once.
 
-#code challenge 16
+# code challenge 16
 ## Write the following method for the Binary Tree class
 
 find maximum value

@@ -85,7 +85,5 @@ Square Brackets : []
 Curly Brackets : {}
 
 ![stack-queue-brackets](code13.PNG)
-=======
 
-![animal-shelter](12.PNG)
 

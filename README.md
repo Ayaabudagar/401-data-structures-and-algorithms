@@ -2,7 +2,6 @@
 
 Challenges | Readme Link
 ---  | --- 
-
 Challenge 1                | [Reverse Array](challenges/reverseArray/reverseArr.md) 
 Challenge 2                | [Insert Shift Array](challenges/array-insert-shift/array-insert-shift.md) 
 Challenge 3                | [array-binary-search](challenges/array-binary-search/array-binary-search.md)

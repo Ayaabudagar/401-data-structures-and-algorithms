@@ -1,6 +1,7 @@
 package trees;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class BinaryTree <T> {
 
@@ -55,5 +56,17 @@ public class BinaryTree <T> {
 
     public void setRoot(Node<T> root) {
         this.root = root;
+    }
+
+    public int maximumValue(){
+        int maxValue = 0;
+        List<Integer> max = (List<Integer>) postOrder((Node<T>) root);
+        for (int i = 0; i < max.size(); i++) {
+            if (max.get(i) >= maxValue) {
+                maxValue = max.get(i);
+            }
+        }
+        return maxValue;
+
     }
 }

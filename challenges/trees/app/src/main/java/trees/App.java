@@ -3,6 +3,10 @@
  */
 package trees;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -30,6 +34,26 @@ public class App {
         System.out.println (binarySearchTree.contains(14));
 
 
+    }
+
+    public static ArrayList<Integer> firstBreadth(BinaryTree<Integer> tree) {
+        ArrayList<Integer> values =new ArrayList<Integer>();
+        Queue<Node> list = new LinkedList<>();
+
+            while (!list.isEmpty()) {
+                Node node = list.remove();
+                values.add((Integer)node.value);
+                if (node.right != null) {
+                    list.add(node.right);
+                }
+                if (node.left != null) {
+                    list.add(node.left);
+                }
+            }
+        if (tree.root != null) {
+            list.add(tree.root);
+        }
+        return values;
     }
 
 

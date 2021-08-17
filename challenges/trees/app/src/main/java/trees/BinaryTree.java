@@ -6,12 +6,18 @@ import java.util.List;
 public class BinaryTree <T> {
 
 
-
-
+    public Node root;
     private ArrayList<T> inOrderList;
     private ArrayList<T> preOrderList;
     private ArrayList<T> postOrderList;
-    private Node <T> root;
+
+    public BinaryTree(T t) {
+
+    }
+
+    public BinaryTree() {
+
+    }
 
 
     public ArrayList<T> preOrder(Node<T> root){

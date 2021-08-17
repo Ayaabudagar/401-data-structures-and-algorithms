@@ -74,5 +74,29 @@ class AppTest {
 
         assertNotNull( "1" , queue.dequeue());
     }
+    @Test void bracketsStackQueue() {
+
+
+        String testString = "";
+        assertTrue(brackets(testString));
+
+
+        testString = " ( { S } ] L )";
+        assertFalse(brackets(testString));
+
+
+        testString = "[ { ( { } ] )";
+        assertFalse(brackets(testString));
+
+
+        testString = "[[({( )})]]";
+        assertTrue(brackets(testString));
+
+
+    }
+
+    private boolean brackets(String testString) {
+        return false;
+    }
 
 }

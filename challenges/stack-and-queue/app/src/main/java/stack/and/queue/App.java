@@ -48,7 +48,16 @@ public class App {
             }
                 if (validateStack.isEmpty()) return false;
 
-        }
+        }else if (character.equals("}")) {
+                if (validateStack.top.value.equals("{")) validateStack.pop();
+                else return false;
+            } else if (character.equals(")")) {
+                if (validateStack.top.value.equals("(")) validateStack.pop();
+                else return false;
+            } else if (character.equals("]")) {
+                if (validateStack.top.value.equals("[")) validateStack.pop();
+                else return false;
+            }
 
     }
         return validateStack.isEmpty();

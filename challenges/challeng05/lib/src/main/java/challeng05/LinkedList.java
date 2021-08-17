@@ -1,3 +1,4 @@
+
 package challeng05;
 public class LinkedList {
 
@@ -81,4 +82,3 @@ public class LinkedList {
             }
         }
     }
-}

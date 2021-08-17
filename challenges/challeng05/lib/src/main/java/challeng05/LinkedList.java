@@ -1,10 +1,8 @@
+
 package challeng05;
-
-
-
 public class LinkedList {
-    public Node head ;
 
+    Node head;
 
     public void insert(int value)  {
         Node newInsertNode = new Node(value);
@@ -37,69 +35,50 @@ public class LinkedList {
         return result;
     }
 
-    public String kthFromEnd(int k){
-        int count = 0;
-        Node current  =this.head;
-        while (current != null) {
-            current = current.next;
-            count++;
-        }
-        if (count < k){
-            return "Exception";
-        } else if (k <= 0){
-            return "Null";
-        }
-        current = this.head;
-        for (int i = 1; i < count - k + 1; i++)
-            current = current.next;
-        String result = "";
-        result += current.value;
-        return result;
-
-    }
-
-    public int append(int value){
-        Node newNode = new Node(value);
-        Node current = this.head;
-
-        if(head == null){
-            head = newNode;
-        }else {
-
-            while (current.next != null){
+    public void append(int value)  {
+        Node newInsertNode = new Node(value);
+        if (head == null) {
+            head = newInsertNode;
+        } else {
+            Node current = head;
+            while (current.next != null) {
                 current = current.next;
             }
-            current.next = newNode;
+            current.next = newInsertNode;
         }
-
-        return newNode.value;
-    }
-    public static LinkedList zipLists(LinkedList list1 ,LinkedList list2){
-        LinkedList mergedList = new LinkedList();
-
-        Node firstTemp = list1.head;
-        Node secondTemp = list2.head;
-
-        while(firstTemp!=null ||secondTemp != null){
-            if(firstTemp == null){
-                mergedList.append(secondTemp.value);
-                secondTemp=secondTemp.next;
-            }
-            if(secondTemp == null){
-                mergedList.append(firstTemp.value);
-                firstTemp=firstTemp.next;
-            }
-
-            else {
-                mergedList.append(firstTemp.value);
-                mergedList.append(secondTemp.value);
-                firstTemp=firstTemp.next;
-                secondTemp=secondTemp.next;
-            }
-
-        }
-        return mergedList;
     }
 
+    public void insertBefore(int value, int newValue) {
+        Node newInsertNode = new Node(newValue);
+        if (head == null) {
+            head = newInsertNode;
+        } else if (head.value == value) {
+            insert(newValue);
+        } else {
+            Node current = head;
+            while (current.next != null) {
+                if (current.next.value == value) {
+                    newInsertNode.next = current.next;
+                    current.next = newInsertNode;
+                    break;
+                }
+                current = current.next;
+            }
+        }
+    }
 
-}
+    public void insertAfter(int value, int newValue) {
+        Node newInsertNode = new Node(newValue);
+        if (head == null) {
+            head = newInsertNode;
+        } else {
+            Node current = head;
+            while (current != null) {
+                if (current.value == value) {
+                    newInsertNode.next = current.next;
+                    current.next = newInsertNode;
+                }
+                current = current.next;
+            }
+        }
+    }

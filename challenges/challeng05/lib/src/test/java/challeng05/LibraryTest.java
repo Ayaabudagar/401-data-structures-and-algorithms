@@ -1,5 +1,6 @@
 package challeng05;
 
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -8,6 +9,7 @@ class AppTest {
         LinkedList testList = new LinkedList();
         assertEquals( "" , testList.toString() );
         assertEquals( null , testList.head );
+
     }
 
     @Test void propertyList() {
@@ -67,4 +69,68 @@ class AppTest {
         String resultString = "{ 9 } -> { 0 } -> { 1 } -> NULL";
         assertEquals( resultString , testList.toString() );
     }
+
+    @Test void appendTest () {
+        LinkedList testList = new LinkedList();
+        testList.insert(1);
+        testList.insert(0);
+        testList.insert(9);
+        testList.append(6);
+        String resultString = "{ 9 } -> { 0 } -> { 1 } -> { 6 } -> NULL";
+        assertEquals( resultString , testList.toString() );
+    }
+
+    @Test void appendMultiTest () {
+        LinkedList testList = new LinkedList();
+        testList.insert(1);
+        testList.insert(0);
+        testList.insert(9);
+        testList.append(6);
+        testList.append(7);
+        testList.append(8);
+        String resultString = "{ 9 } -> { 0 } -> { 1 } -> { 6 } -> { 7 } -> { 8 } -> NULL";
+        assertEquals( resultString , testList.toString() );
+    }
+
+    @Test void beforeMiddleTest () {
+        LinkedList testList = new LinkedList();
+        testList.append(6);
+        testList.append(7);
+        testList.append(8);
+        testList.insertBefore(7,10);
+        String resultString = "{ 6 } -> { 10 } -> { 7 } -> { 8 } -> NULL";
+        assertEquals( resultString , testList.toString() );
+    }
+
+    @Test void beforeFirstTest () {
+        LinkedList testList = new LinkedList();
+        testList.append(6);
+        testList.append(7);
+        testList.append(8);
+        testList.insertBefore(6,10);
+        String resultString = "{ 10 } -> { 6 } -> { 7 } -> { 8 } -> NULL";
+        assertEquals( resultString , testList.toString() );
+    }
+
+    @Test void afterMiddleTest () {
+        LinkedList testList = new LinkedList();
+        testList.append(6);
+        testList.append(7);
+        testList.append(8);
+        testList.insertAfter(7,10);
+        String resultString = "{ 6 } -> { 7 } -> { 10 } -> { 8 } -> NULL";
+        assertEquals( resultString , testList.toString() );
+    }
+
+    @Test void afterLastTest () {
+        LinkedList testList = new LinkedList();
+        testList.append(6);
+        testList.append(7);
+        testList.append(8);
+        testList.insertAfter(8,10);
+        String resultString = "{ 6 } -> { 7 } -> { 8 } -> { 10 } -> NULL";
+        assertEquals( resultString , testList.toString() );
+    }
+
 }
+

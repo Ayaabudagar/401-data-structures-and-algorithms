@@ -84,6 +84,6 @@ Round Brackets : ()
 Square Brackets : []
 Curly Brackets : {}
 
-![stack-queue-brackets](code13.PNG)
+![stack-queue-brackets](13.PNG)
 
 

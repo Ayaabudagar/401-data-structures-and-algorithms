@@ -6,7 +6,7 @@ public class Stack<T>{
         node.next=top;
         top=node;
     }
-    public T pop(){
+    public String pop(){
         T info = null ;
         if(top==null){
             System.out.println("Empty");

@@ -28,3 +28,9 @@ Returns: number
 Find the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
 ![maximum value](code16.PNG)
 
+
+# code challenge 17
+## Write a function witch accepts a tree as 
+an parameter and return a list of all values
+in the tree in the order they were encountered
+![tree-breadth-first](code17.PNG)

@@ -73,7 +73,7 @@ If pref is not "dog" or "cat" then return null.
 
 ![animal-shelter](12.PNG)
 
-## codechallenge 13
+## code challenge 13
 ### Write a function called validate brackets
 Arguments: string
 Return: boolean

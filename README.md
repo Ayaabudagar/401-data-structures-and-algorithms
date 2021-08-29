@@ -8,6 +8,7 @@ Challenge 3                | [array-binary-search](challenges/array-binary-searc
 Challenge 5,7,8            | [linkedList](challenges/challeng05/linkedList.md)
 Challenge 10,11,12,13      | [stack-and-queue](challenges/stack-and-queue/stack-and-queue.md)
 Challenge 15,16,17         | [trees](challenges/trees/trees.md)
+Challenge 26               | [Insertion Sort](challenges/Insertion-Sort/Insertion-Sort.md)
 
 
   

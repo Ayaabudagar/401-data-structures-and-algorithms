@@ -3,13 +3,17 @@
  */
 package Insertion.Sort;
 
+import java.util.Arrays;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
     public static void main(String[] args) {
+        int[] array = {8,4,23,42,16,15};
         System.out.println(new App().getGreeting());
+        System.out.println(Arrays.toString(mergeSort(array)));
     }
     public static int[] insertionSort(int[] array){
         for (int i = 1; i < array.length; i++) {
@@ -24,4 +28,53 @@ public class App {
         }
         return array;
     }
+    public static int[] mergeSort(int[] array){
+        int n =array.length;
+        int mid = n / 2;
+        int[] left = new int[mid];
+        int[] right = new int[n - mid];
+        if (n > 1) {
+            for (int i = 0; i < left.length; i++) {
+                left[i] = array[i];
+
+    }
+            for (int j = 0; j < right.length; j++) {
+                right[j] = array[j + mid];
+            }
+            mergeSort(left);
+            mergeSort(right);
+            merge(left, right, array);
+
 }
+    return array;
+}
+    public static void merge(int[] left, int[] right, int[] array){
+        int i =0;
+        int j =0;
+        int k =0;
+        while (i<left.length && j< right.length){
+            if (left[i] <= right[j]){
+                array[k] = left[i];
+                i=i+1;
+            }
+            else {
+                array[k] = right[j];
+                j=j+1;
+            }
+            k=k+1;
+        }
+        if (i == left.length){
+            array[k] = left[i];
+            i=i+1;
+            k=k+1;
+
+        }
+        while (j<right.length){
+            array[k]=right[j];
+            i=i+1;
+            k=k+1;
+        }
+
+    }
+}
+

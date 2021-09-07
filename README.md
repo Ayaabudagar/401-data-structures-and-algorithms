@@ -12,6 +12,8 @@ Challenge 26               | [Insertion Sort](challenges/Insertion-Sort/Insertio
 Challenge 26 blog          | [Insertion Sort](challenges/Insertion-Sort/Blog.md)
 Challenge 27               | [Merge Sort](challenges/mergesort/mergesort.md)
 Challenge 27 blog          | [Merge Sort](challenges/mergesort/BLOG.md)
+Challenge 28               | [Quick Sort](challenges/mergesort/quicksort.md)
+Challenge 28 blog          | [Quick Sort](challenges/mergesort/BLOG.md)
 
 
 

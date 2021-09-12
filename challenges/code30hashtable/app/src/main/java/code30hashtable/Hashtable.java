@@ -62,4 +62,19 @@ public Hash[] array =new Hash[20];
         }
         return T;
     }
+    public static String repeatedWord (String text){
+
+        String[] repeatWord = text.split(" ");
+
+        for(int i = 0; i<repeatWord.length; i++){
+            for(int j= 0; j<i; j++){
+
+                if (repeatWord[i].equals(repeatWord[j].toLowerCase()))
+                    return repeatWord[i].toLowerCase();
+            }
+        }
+
+        return null;
+    }
+
 }

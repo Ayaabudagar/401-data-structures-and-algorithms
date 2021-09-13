@@ -3,6 +3,7 @@
  */
 package code30hashtable;
 
+import java.util.*;
 import java.util.Hashtable;
 
 public class App {
@@ -18,5 +19,22 @@ public class App {
 
 
 
+
+
     }
+    public static Map<String,
+            List<String>> hashMapLeftJoins(Map<String,String> map1, Map<String,String> map2){
+        Map<String,List<String>> result=new HashMap<>();
+        System.out.println(map1);
+        System.out.println(map2);
+        map1.forEach((key,value)->{
+            result.put(key, Arrays.asList(value, map2.getOrDefault(value, "null")));
+        });
+        System.out.println(result);
+
+        return result;
+
+    }
+
+
 }

@@ -37,3 +37,10 @@ breadth first
 Arguments: Node
 Return: A collection of nodes in the order they were visited.
 Display the collection
+
+
+## code challenge 37
+![city trip](code37.PNG)
+### Write a function called business trip
+Arguments: graph, array of city names
+Return: cost or null

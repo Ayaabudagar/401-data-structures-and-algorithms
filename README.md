@@ -15,7 +15,7 @@ Challenge 27 blog          | [Merge Sort](challenges/mergesort/BLOG.md)
 Challenge 28               | [Quick Sort](challenges/mergesort/quicksort.md)
 Challenge 28 blog          | [Quick Sort](challenges/mergesort/BLOG.md)
 Challenge 30,31,33         | [Hash Table](challenges/code30hashtable/hashtable.md)
-Challenge 35,36            | [Graph](challenges/graph/graph.md)
+Challenge 35,36,37         | [Graph](challenges/graph/graph.md)
 
 
 

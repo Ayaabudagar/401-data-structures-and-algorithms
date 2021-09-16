@@ -27,3 +27,13 @@ Include the weight of the connection in the returned collection
 ### size
 Arguments: none
 Returns the total number of nodes in the graph
+
+
+## code challenge 36 
+![breadfirst](code36.PNG)
+## Implement a breadth-first traversal on a graph.
+### Write the following method for the Graph class:
+breadth first
+Arguments: Node
+Return: A collection of nodes in the order they were visited.
+Display the collection

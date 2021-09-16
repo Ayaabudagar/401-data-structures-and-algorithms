@@ -17,7 +17,7 @@ class AppTest {
         Graph<String> graph = new Graph<>();
         Node<String> vertex = graph.addNode("A");
 
-        assertTrue(graph.map.containsKey(vertex));
+        assertTrue(((Graph<String>) graph).map.containsKey(vertex));
 //        An edge can be successfully added to the graph
         Node<String> vertex2 = graph.addNode("B");
         graph.addEdge(vertex,vertex2);
@@ -46,4 +46,20 @@ class AppTest {
         assertNull(emptyGraph.getNodes());
 
     }
+    @Test
+    public void breadthFirst(){
+        Graph graph = new Graph();
+        graph.addNode("Jawad");
+        graph.addNode("Noor");
+
+        Node vertex = new Node("Jawad");
+        Node vertex2 = new Node("Noor");
+        List<Node> list= new ArrayList<>();
+        list.add(vertex);
+        list.add(vertex2);
+
+        assertEquals(list , graph.breadthFirst(vertex));
+
+    }
+
 }

@@ -2,9 +2,11 @@ package graph;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Graph <T>{
+    private Map<Node, List<Node>> map = new HashMap<>();
     public Node<T> addVertex(T value ){
 
         Node vertex = new Node( value);
@@ -12,8 +14,8 @@ public class Graph <T>{
         return vertex;
 
     }
-    Map<Node <T>,
-            ArrayList<Node<T>>> map = new HashMap<>();
+//    Map<Node <T>,
+//            ArrayList<Node<T>>> map = new HashMap<>();
     public void addEdge(Node node1 , Node node2){
         map.get(node1).add(node2);
         map.get(node2).add(node1);
@@ -31,7 +33,7 @@ public class Graph <T>{
 
     }
 
-    public  ArrayList<Node<T>> getNeighbors(Node node){
+    public List<Node> getNeighbors(Node node){
         return map.get(node);
     }
 
@@ -53,5 +55,27 @@ public class Graph <T>{
 
 
 
+
+
     }
+    public ArrayList<Node> breadthFirst( Node vertex){
+        ArrayList<Node> array  =new ArrayList<>();
+        ArrayList<Node> vertexArray = new ArrayList<>();
+        List<Node> allNode = map.get(vertexArray.get(0));
+        vertexArray.add(vertex);
+        for(Node vertex2: allNode){
+            if(!array.contains(vertex2)){
+                vertexArray.add(vertex2);
+        while (vertexArray.size() != 0){
+            array.add(vertexArray.get(0));
+
+            vertexArray.remove(0);
+
+            }
+        }
+
+    }
+        return array;
+
+}
 }

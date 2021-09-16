@@ -1,9 +1,6 @@
 package graph;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Graph <T>{
     private Map<Node, List<Node>> map = new HashMap<>();
@@ -78,4 +75,38 @@ public class Graph <T>{
         return array;
 
 }
+
+
+
+    private void tripPrice(String city1, String city2, Graph graph){
+        Node vertex= new Node(city1);
+        if (graph.getNeighbors(vertex) == null){
+            return;
+        }
+
+        for (Node vertex1: graph.getNeighbors(vertex)) {
+            if (Objects.equals(city2, vertex1)){
+                cost ++;
+                break;
+            }
+
+        }
+
+}
+     int cost = 0;
+    public int citiesTrip(Graph graph, ArrayList<String> cities){
+        cost = 0;
+        if (cities.size() <= 1  ){
+            return 0;
+        }
+        if(graph == null){
+            return 0;
+        }
+        for (int i = 0; i < cities.size()-1; i ++){
+            tripPrice(cities.get(i), cities.get(i + 1), graph);
+        }
+
+        return cost;
+    }
+
 }

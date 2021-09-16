@@ -61,5 +61,29 @@ class AppTest {
         assertEquals(list , graph.breadthFirst(vertex));
 
     }
+    @Test
+    public void cityTrip(){
+        Graph graph = new Graph();
+
+
+        graph.addNode("node1");
+        graph.addNode("node2");
+        graph.addNode("node3");
+
+
+        ArrayList list= new ArrayList();
+        list.add("node4");
+        list.add("node5");
+        list.add("node6");
+
+        assertEquals(90 , graph.citiesTrip(graph, list));
+
+        List list1= new ArrayList();
+        list1.add("node1");
+        list1.add("node2");
+        assertEquals(0 , graph.citiesTrip(graph , list1));
+
+
+    }
 
 }

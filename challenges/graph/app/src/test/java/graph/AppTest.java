@@ -81,9 +81,23 @@ class AppTest {
         List list1= new ArrayList();
         list1.add("node1");
         list1.add("node2");
-        assertEquals(0 , graph.citiesTrip(graph , list1));
+        assertEquals(0 , graph.citiesTrip(graph , list));
 
 
+    }
+
+    @Test
+    public void depthFirst(){
+        Graph graph= new Graph();
+        graph.addNode("F");
+        graph.addNode("G");
+        graph.addNode("H");
+        graph.addNode("R");
+
+        List list= new ArrayList();
+        list.add("R");
+        Node vertex= new Node("R");
+        assertEquals(list, graph.depthFirst(vertex));
     }
 
 }

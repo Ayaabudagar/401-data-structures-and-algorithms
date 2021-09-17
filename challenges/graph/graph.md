@@ -44,3 +44,10 @@ Display the collection
 ### Write a function called business trip
 Arguments: graph, array of city names
 Return: cost or null
+
+## code challenge 38
+![depth first](code38.PNG)
+### depth first
+Arguments: Node (Starting point of search)
+Return: A collection of nodes in their pre-order depth-first traversal order
+Display the collection

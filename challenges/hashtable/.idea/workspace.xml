@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="39364f21-d0d3-4848-8f7d-0489e604fae6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../code30hashtable/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../code30hashtable/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../code30hashtable/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../code30hashtable/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../code30hashtable/.idea/libraries-with-intellij-classes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../code30hashtable/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../code30hashtable/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../code30hashtable/app/src/main/java/code30hashtable/Hash.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../code30hashtable/app/src/main/java/code30hashtable/Hashtable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../challeng06/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../challeng06/.idea/gradle.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1xjWRRfOUyHrsLVzTnpM3dwsvf1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../code30hashtable" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunManager">
+    <configuration name="AppTest.hashtableBuilderTester" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;hashtable.AppTest.hashtableBuilderTester&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":app:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="39364f21-d0d3-4848-8f7d-0489e604fae6" name="Default Changelist" comment="" />
+      <created>1630868970624</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1630868970624</updated>
+      <workItem from="1630868972303" duration="595000" />
+      <workItem from="1630869660421" duration="986000" />
+      <workItem from="1630947151731" duration="44000" />
+      <workItem from="1631012431887" duration="1500000" />
+      <workItem from="1631014209099" duration="903000" />
+      <workItem from="1631027600202" duration="1128000" />
+      <workItem from="1631030762163" duration="515000" />
+      <workItem from="1631032320775" duration="584000" />
+      <workItem from="1631034261962" duration="591000" />
+      <workItem from="1631045828631" duration="628000" />
+      <workItem from="1631048518673" duration="592000" />
+      <workItem from="1631050748636" duration="592000" />
+      <workItem from="1631053284577" duration="588000" />
+      <workItem from="1631055348109" duration="594000" />
+      <workItem from="1631377160279" duration="1177000" />
+      <workItem from="1631385145852" duration="238000" />
+      <workItem from="1631385458473" duration="282000" />
+      <workItem from="1631385940116" duration="67000" />
+      <workItem from="1631387040058" duration="648000" />
+      <workItem from="1631387758327" duration="1496000" />
+      <workItem from="1631389809569" duration="591000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

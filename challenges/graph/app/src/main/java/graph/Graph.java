@@ -108,5 +108,21 @@ public class Graph <T>{
 
         return cost;
     }
+   ArrayList  newList= new ArrayList();
+    public List<Node> depthFirst(Node vertex){
+        if(vertex == null){
+            return newList;
+        }
+        newList.add(vertex);
+        List<Node> neighborsList = getNeighbors(vertex);
+        if (neighborsList.size()==0){
+            return newList;
+        }
+        for ( Node v: neighborsList) {
+            if(!newList.contains(v))
+                depthFirst(v);
+        }
 
+        return newList;
+    }
 }

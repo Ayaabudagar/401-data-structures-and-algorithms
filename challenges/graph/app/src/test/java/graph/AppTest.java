@@ -6,98 +6,206 @@ package graph;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
     @Test void appHasAGreeting() {
 
-//        Node can be successfully added to the graph
-        Graph<String> graph = new Graph<>();
-        Node<String> vertex = graph.addNode("A");
+}
 
-        assertTrue(((Graph<String>) graph).map.containsKey(vertex));
-//        An edge can be successfully added to the graph
-        Node<String> vertex2 = graph.addNode("B");
-        graph.addEdge(vertex,vertex2);
+    @Test
+    public void addNewVertex(){
+        Graph graph = new Graph();
+        Node vertex = new Node("Ali");
 
-        assertEquals(vertex2 , graph.getNeighbors(vertex).get(0));
-//        A collection of all nodes can be properly retrieved from the graph
-        ArrayList<Node<String>> finalResult = new ArrayList<>();
-        finalResult.add(vertex);
-        finalResult.add(vertex2);
-        assertEquals(finalResult, graph.getNodes());
-//        All appropriate neighbors can be retrieved from the graph
-        List<Node<String>> resultTwo = new ArrayList<>();
-        resultTwo.add(vertex2);
-        assertEquals(resultTwo , graph.getNeighbors(vertex));
-//        The proper size is returned, representing the number of nodes in the graph
-        assertEquals(2,graph.getSize());
-//        A graph with only one node and edge can be properly returned
-        Graph<String> oneNodeGraph = new Graph<>();
-        Node<String> vertex3 = oneNodeGraph.addNode("A");
-
-        ArrayList<Node<String>> result3 = new ArrayList<>();
-        result3.add(vertex3);
-        assertEquals(result3, oneNodeGraph.getNodes());
-//        An empty graph properly returns null
-        Graph<String> emptyGraph = new Graph<>();
-        assertNull(emptyGraph.getNodes());
-
+        assertEquals(vertex, graph.addVertex("Ali"));
     }
+
+    @Test
+    public void addNewEdge(){
+        Graph graph = new Graph();
+        graph.addVertex("Osama");
+        graph.addVertex("Ali");
+        graph.addVertex("Ahmad");
+        List<Node> list= new ArrayList<>();
+        Node vertex=new Node("Ahmad");
+        list.add(vertex);
+
+        assertEquals(list , graph.addEdge("Osama" , "Ahmad") );
+    }
+
+    @Test
+    public void getAdjVertices(){
+        Graph graph = new Graph();
+        graph.addVertex("Osama");
+        graph.addVertex("Omar");
+
+        Node v1 = new Node("Osama");
+        Node v2 = new Node("Omar");
+        Map<Node,  List<Node>> adjVertices = new HashMap<>();
+
+        adjVertices.putIfAbsent(v1, new ArrayList<>());
+        adjVertices.putIfAbsent(v2, new ArrayList<>());
+
+
+        assertEquals(adjVertices , graph.getAdjVertices());
+    }
+
+    @Test
+    public void getNeighbors(){
+        Graph graph = new Graph();
+        graph.addVertex("Osama");
+        graph.addVertex("Omar");
+
+        Node v1 = new Node("Osama");
+        Node v2 = new Node("Omar");
+        Map<Node,  List<Node>>  adjVertices = new HashMap<>();
+
+        adjVertices.putIfAbsent(v1, new ArrayList<>());
+        adjVertices.putIfAbsent(v2, new ArrayList<>());
+        graph.addEdge("Osama" , "Omar");
+
+        List<Node> list = new ArrayList<>();
+        list.add(v2);
+
+        assertEquals(list , graph.getNeighbors(v1));
+    }
+
+    @Test
+    public void getSize(){
+        Graph graph = new Graph();
+        graph.addVertex("Osama");
+        graph.addVertex("Omar");
+
+        assertEquals( 2, graph.getSize());
+    }
+
     @Test
     public void breadthFirst(){
         Graph graph = new Graph();
-        graph.addNode("Jawad");
-        graph.addNode("Noor");
+        graph.addVertex("Jawad");
+        graph.addVertex("Noor");
+        graph.addVertex("Areen");
+        graph.addVertex("Maram");
+        graph.addVertex("Enas");
+
+        graph.addEdge("Jawad" , "Noor");
+        graph.addEdge("Areen" , "Noor");
+        graph.addEdge("Enas" , "Jawad");
 
         Node vertex = new Node("Jawad");
         Node vertex2 = new Node("Noor");
+        Node vertex3 = new Node("Enas");
+        Node vertex4 = new Node("Areen");
+
         List<Node> list= new ArrayList<>();
         list.add(vertex);
         list.add(vertex2);
+        list.add(vertex3);
+        list.add(vertex4);
 
         assertEquals(list , graph.breadthFirst(vertex));
 
     }
+
     @Test
     public void cityTrip(){
         Graph graph = new Graph();
 
+        graph.addVertex("Ibrahim");
+        graph.addVertex("Qaed");
+        graph.addVertex("Ali");
+        graph.addVertex("Ahmad");
+        graph.addVertex("Osama");
+        graph.addVertex("Omar");
+        graph.addEdge("Ibrahim" , "Ali", 15);
+        graph.addEdge("Ibrahim" , "Omar", 60 );
+        graph.addEdge("Osama" , "Ali", 14);
+        graph.addEdge("Omar" , "Ahmad", 30);
 
-        graph.addNode("node1");
-        graph.addNode("node2");
-        graph.addNode("node3");
-
-
-        ArrayList list= new ArrayList();
-        list.add("node4");
-        list.add("node5");
-        list.add("node6");
+        List list= new ArrayList();
+        list.add("Ibrahim");
+        list.add("Omar");
+        list.add("Ahmad");
 
         assertEquals(90 , graph.citiesTrip(graph, list));
 
-        List list1= new ArrayList();
-        list1.add("node1");
-        list1.add("node2");
-        assertEquals(0 , graph.citiesTrip(graph , list));
+        List list2= new ArrayList();
+        list2.add("Osama");
+        list2.add("Ahmad");
+        assertEquals(0 , graph.citiesTrip(graph , list2));
+
+        List list3= new ArrayList();
+        list3.add("Omar");
+        list3.add("Ali");
+        list3.add("Ibrahim");
+
+        assertEquals(15 , graph.citiesTrip(graph, list3));
 
 
+        assertEquals( 0, graph.citiesTrip(graph , list4));
     }
 
     @Test
-    public void depthFirst(){
+    public void depthFirstTraversal(){
+        Graph graph = new Graph();
+        graph.addVertex("A");
+        graph.addVertex("B");
+        graph.addVertex("C");
+        graph.addVertex("D");
+        graph.addVertex("E");
+        graph.addVertex("F");
+        graph.addVertex("G");
+        graph.addVertex("H");
+        graph.addVertex("R");
+
+        graph.addEdge("A" , "B", 30);
+        graph.addEdge("A" , "D", 30);
+        graph.addEdge("C" , "B", 30);
+        graph.addEdge("C" , "G", 30);
+        graph.addEdge("G" , "C", 30);
+        graph.addEdge("D" , "A", 30);
+        graph.addEdge("D" , "B", 30);
+        graph.addEdge("D" , "E", 30);
+        graph.addEdge("D" , "H", 30);
+        graph.addEdge("D" , "F", 30);
+
+        Node vertex= new Node("A");
+
+        List list= new ArrayList();
+        list.add("A");
+        list.add("B");
+        list.add("C");
+        list.add("G");
+        list.add("D");
+        list.add("E");
+        list.add("H");
+        list.add("F");
+
+        assertEquals(list , graph.depthFirst(vertex));
+    }
+
+    @Test
+
+    public void depthFirst2(){
         Graph graph= new Graph();
-        graph.addNode("F");
-        graph.addNode("G");
-        graph.addNode("H");
-        graph.addNode("R");
+        graph.addVertex("F");
+        graph.addVertex("G");
+        graph.addVertex("H");
+        graph.addVertex("R");
+
+        graph.addEdge("F" , "G", 30);
+        graph.addEdge("G" , "H", 30);
+        graph.addEdge("H" , "F", 30);
 
         List list= new ArrayList();
         list.add("R");
-        Node vertex= new Node("R");
-        assertEquals(list, graph.depthFirst(vertex));
+        Node vertex1= new Node("R");
+        assertEquals(list, graph.depthFirst(vertex1));
     }
-
 }
+

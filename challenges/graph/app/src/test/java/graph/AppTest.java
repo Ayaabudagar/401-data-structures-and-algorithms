@@ -146,8 +146,6 @@ class AppTest {
 
         assertEquals(15 , graph.citiesTrip(graph, list3));
 
-        List list4= new ArrayList();
-        list4.add("Qaed");
 
         assertEquals( 0, graph.citiesTrip(graph , list4));
     }
@@ -192,6 +190,7 @@ class AppTest {
     }
 
     @Test
+
     public void depthFirst2(){
         Graph graph= new Graph();
         graph.addVertex("F");
@@ -209,3 +208,4 @@ class AppTest {
         assertEquals(list, graph.depthFirst(vertex1));
     }
 }
+
